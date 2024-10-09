@@ -4,7 +4,9 @@ A blockchain-based voting system that preserves voter privacy and increases acce
 Check out the detailed implementation at https://medium.com/coinmonks/e-voting-system-based-on-blockchain-75570ef92c4
 
 
-![Screenshot 1](Screenshots/screenshot1.png) ![Screenshot 2](Screenshots/screenshot2.png)![Screenshot 3](Screenshots/screenshot3.jpeg) ![Screenshot 4](Screenshots/screenshot4.jpeg)![Screenshot 5](Screenshots/screenshot5.jpeg) ![Screenshot 6](Screenshots/Screenshot6.png)
+![Screenshot 1](Screenshots/screenshot1.png) ![Screenshot 2](Screenshots/screenshot2.png)![Screenshot 3](Screenshots/screenshot3.png) ![Screenshot 4](Screenshots/screenshot4.png)![Screenshot 5](Screenshots/screenshot5.png) ![Screenshot 6](Screenshots/screenshot6.png)![Screenshot 7](Screenshots/Screenshot7.png)![Screenshot 8](Screenshots/screenshot8.png)
+![Screenshot 9](Screenshots/screenshot9.png)
+
 
 
 Pre requisites:
@@ -30,6 +32,12 @@ Open your browser and configure metamask. Create a wallet and store your```Secre
 2. Copy the private key and click done.
 3. Open the metamask menu which can be accessed by clicking the profile picture and select import account.
 4. Paste the private key copied from ganache and click import.
+
+
+### Install these additional packages just in case to avoid errors:
+
+- Web3.js: ```npm i web3```
+- Solidity (solc-js): ```npm i solc```
 
 #### Cloning the project
 
@@ -57,7 +65,7 @@ Open your browser and configure metamask. Create a wallet and store your```Secre
 
 ```truffle compile```
 
-```truffle migrate```or```truffle migrate --reset``` for subsequent runs
+```truffle migrate```or ( ```truffle migrate --reset``` for subsequent runs)
 
 
 
