@@ -111,6 +111,78 @@
 
 <!-- Reference to external JavaScript file -->
 <script src="js/index.js"></script>
+<script>
+  document.getElementById('form').addEventListener('submit', function (event) {
+    // Prevent default form submission
+    event.preventDefault();
+
+    // Get form values
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const idNumber = document.getElementById('idNumber').value.trim();
+    const mobileNumber = document.getElementById('mobileNumber').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // Define validation flags
+    let isValid = true;
+
+    // Clear existing error messages
+    document.querySelectorAll('.error').forEach(el => el.remove());
+
+    // Validation rules
+    const nameRegex = /^[A-Za-z\s-]+$/;    // Validates alphabetic names with spaces or hyphens
+    const aadharRegex = /^[2-9][0-9]{11}$/; // Validates 12-digit Aadhar starting with 2-9
+    const mobileRegex = /^[6-9]\d{9}$/;    // Validates 10-digit Indian mobile numbers
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validates email
+    const passwordMinLength = 8;
+
+    // Validate each field
+    if (!firstName || !nameRegex.test(firstName)) {
+      isValid = false;
+      showError('firstName', 'First name must contain only letters, spaces, or hyphens.');
+    }
+    if (!lastName || !nameRegex.test(lastName)) {
+      isValid = false;
+      showError('lastName', 'Last name must contain only letters, spaces, or hyphens.');
+    }
+    if (!aadharRegex.test(idNumber)) {
+      isValid = false;
+      showError('idNumber', 'Invalid Aadhar number.');
+    }
+    if (!mobileRegex.test(mobileNumber)) {
+      isValid = false;
+      showError('mobileNumber', 'Invalid mobile number.');
+    }
+    if (!emailRegex.test(email)) {
+      isValid = false;
+      showError('email', 'Invalid email address.');
+    }
+    if (password.length < passwordMinLength) {
+      isValid = false;
+      showError('password', `Password must be at least ${passwordMinLength} characters.`);
+    }
+
+    // Submit if valid
+    if (isValid) {
+      alert('Form submitted successfully!');
+      this.submit(); // or call your `App.addUser()` function
+    }
+  });
+
+  // Helper function to display error messages
+  function showError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    const error = document.createElement('div');
+    error.className = 'error';
+    error.style.color = 'red';
+    error.style.fontSize = '12px';
+    error.textContent = message;
+    field.parentElement.appendChild(error);
+  }
+</script>
+
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
