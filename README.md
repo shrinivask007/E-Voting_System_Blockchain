@@ -35,6 +35,7 @@ Open your browser and configure metamask. Create a wallet and store your```Secre
 
 - Web3.js: ```npm i web3```
 - Solidity (solc-js): ```npm i solc```
+- Trufflejs: ```npm install -g truffle```
 
 #### Cloning the project
 
