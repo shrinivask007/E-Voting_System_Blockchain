@@ -1,8 +1,6 @@
 ## E-Voting System Based on Blockchain
 A blockchain-based voting system that preserves voter privacy and increases accessibility, while keeping the voting system transparent, secure, and cost-effective. The system implements a voting framework that utilizes ethereum’s blockchain and smart contracts to achieve voter administration and auditable voting records. The implementation was deployed on ethereum’s test network to demonstrate usability, scalability, and efficiency.
 
-Check out the detailed implementation at https://medium.com/coinmonks/e-voting-system-based-on-blockchain-75570ef92c4
-
 ![Screenshot 1](Screenshots/screenshot1.png) ![Screenshot 2](Screenshots/screenshot2.png)![Screenshot 3](Screenshots/screenshot3.png) ![Screenshot 4](Screenshots/screenshot4.png)![Screenshot 5](Screenshots/screenshot5.png) ![Screenshot 6](Screenshots/screenshot6.png)![Screenshot 7](Screenshots/Screenshot7.png)![Screenshot 8](Screenshots/screenshot8.png)
 ![Screenshot 9](Screenshots/screenshot9.png)
 
@@ -67,7 +65,7 @@ Open your browser and configure metamask. Create a wallet and store your```Secre
 
 ```truffle migrate```or ( ```truffle migrate --reset``` for subsequent runs)
 
-
+Check out the detailed implementation at https://medium.com/coinmonks/e-voting-system-based-on-blockchain-75570ef92c4
 
 The project will open in the browser and metamask will ask you to select an account. Select the account we had imported earlier.
 
